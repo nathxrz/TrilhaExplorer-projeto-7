@@ -1,0 +1,180 @@
+*{
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  
+  --bg-screen: #FFF;
+  --bg-btnAgain: #FF9500;
+  --bg-btnHover: #e68600;
+
+  --fc-heading: #34355B;
+  --fc-subtitle: #34355B;
+  --fc-btn: #FFF;
+
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-secondary: 'DM Sans', sans-serif;
+}
+
+body{
+  background: linear-gradient(45deg, #190361, #BB00FF);
+  background-size: 200% 200%;
+  min-height: 100vh;
+  
+  font-size: 1.6rem;
+  
+  padding: auto;
+  
+  display: grid;
+  place-items: center;
+
+  animation: bodyTransition 10s ease infinite;
+ }
+
+ #container{
+  padding: 1.6rem;
+ }
+
+/* screen 01 */
+main{
+  width: min(42.4rem, 90%);
+  background-color: var(--bg-screen);
+
+  margin: 0 auto;
+  padding: 4.8rem 6.4rem 6.4rem;
+
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+
+  text-align: center;
+}
+
+main h1{
+  color: var(--fc-heading);
+  font-family: var(--ff-primary);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+main p{
+  color: var(--fc-subtitle);
+  font-family: var(--ff-secondary);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+
+  margin: 1.4rem 0 2.0rem;
+}
+
+input{
+  max-width: 100%;
+}
+
+input:hover{
+  animation: btn-luck .16s ease infinite;
+}
+
+.hide{
+  display: none;
+}
+
+/* screen 02*/
+#msg-luck{
+  margin-top: 1.7rem;
+  max-width: 100%;
+
+  animation: msg-luck 1s ease;
+}
+
+#biscuit02{
+  margin: 6rem 0;
+
+  max-width: 100%;
+}
+
+#btnAgain{
+  font-family: var(--ff-secondary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  color: var(--fc-btn);
+  
+  background-color: var(--bg-btnAgain);
+
+  border: none;
+
+  padding: 1.6rem;
+}
+
+#btnAgain:hover{
+  background-color: var(--bg-btnHover);
+
+  cursor: pointer;
+}
+
+@keyframes bodyTransition{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes btn-luck{
+  0%{
+    transform: translateX(10px);
+  }
+  50%{
+    transform: translateX(-5px);
+  }
+  100%{
+    transform: translateY(8px);
+  }
+}
+
+
+@keyframes msg-luck{
+  0%{
+    transform: translateY(20rem) scale(0.1);
+    
+  }
+  100%{
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media screen and (max-width: 470px){
+  main{
+    padding: 4rem 6rem 6rem;
+  }
+
+	main h1{
+    font-size: 2rem;
+  }
+ 
+  #biscuit02{
+    margin: 4rem 0;
+
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 390px){
+  main{
+    padding: 3rem 4.5rem 4.5rem;
+  }
+
+  #btnAgain{
+    padding: 1rem;
+  }
+}

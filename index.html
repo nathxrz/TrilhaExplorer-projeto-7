@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>Sorte do dia</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <main>
+      <div class="screen01">
+        <h1>
+          Qual é a sua sorte de hoje?
+        </h1>
+        <p>
+          Abra o biscoito e descubra!
+        </p>
+        <form>
+          <input type="image" id="btnImage" src="./assets/biscuit.svg" alt="Desenho de um biscoito da sorte">
+        </form>
+      </div>
+
+      <div class="screen02 hide">
+        <h1>
+          Aqui está a sua sorte de hoje:
+        </h1>
+        <img id="msg-luck" src="" alt='Imagem de uma mensagem da sorte'>
+       <img id="biscuit02" src="./assets/biscuit02.svg" alt="Desenho de um biscoito da sorte">
+        <button id="btnAgain">Abrir outro biscoito</button> 
+      </div>
+    </main>
+  </div>
+  <script src="lib.js">
+  </script>
+</body>
+</html>
